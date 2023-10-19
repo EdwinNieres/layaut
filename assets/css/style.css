@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap");
+
+/* ESTILOS GENERALES-CONTENEDOR Y HEADER*/
+
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #eee;
+  box-sizing: border-box;
+  font-family: "Roboto Slab", serif;
+  scroll-behavior: smooth;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "menu main"
+    "footer footer";
+  grid-template-columns: 150px 1fr;
+  grid-template-rows: 60px 100% 50px;
+}
+
+header {
+  grid-area: header;
+  background-color: black;
+  align-items: center;
+  display: grid;
+  position: fixed;
+  height: 60px;
+  width: 100%;
+}
+
+header h1 {
+  margin: auto;
+  background-color: black;
+  text-align: center;
+  color: white;
+  font-weight: 900;
+}
+
+header h1:hover {
+  cursor: pointer;
+}
+
+main {
+  grid-area: main;
+  background-color: white;
+}
+
+/* ESTILOS MENU/NAVEGADOR */
+
+menu {
+  grid-area: menu;
+}
+
+.navegador {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  background-color: rgb(50, 50, 50);
+}
+
+.navegador p {
+  margin: 10px;
+  font-weight: bold;
+  background-color: rgb(50, 50, 50);
+  color: whitesmoke;
+  font-size: 21px;
+}
+
+.navegador a {
+  text-decoration: none;
+  color: white;
+  background-color: rgb(50, 50, 50);
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+
+.navegador a:hover {
+  background-color: rgb(160, 160, 160);
+  color: black;
+}
+
+.navegador li {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 10px;
+  background-color: rgb(50, 50, 50);
+  width: 100%;
+}
+
+.navegador li:hover {
+  background-color: rgb(160, 160, 160);
+  width: 100%;
+  cursor: pointer;
+}
+
+.navegador b {
+  background-color: rgb(50, 50, 50);
+  color: gray;
+  font-size: 12px;
+  border-radius: 8px;
+  padding: 3px;
+}
+
+/* ESTILOS SECCION PRINCIPAL */
+
+.principal {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+}
+
+.principal button {
+  width: 100%;
+  border: none;
+  background-color: black;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 21px;
+  cursor: pointer;
+}
+
+.principal button:hover {
+  background-color: rgb(50, 50, 50);
+  color: rgb(9, 7, 7);
+}
+
+/* ESTILOS A LAS CARTAS */
+
+.cartas {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: -1px 16px 18px -6px rgba(0, 0, 0, 0.75);
+  margin: 30px;
+  width: 300px;
+  height: 370px;
+  margin-bottom: -30px;
+  flex-wrap: wrap;
+}
+
+.cartas img {
+  width: 250px;
+  height: 170px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+/* ESTILOS A LOS DATOS DE LA CARTA */
+
+.data {
+  text-align: center;
+}
+
+.data .titulo {
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.data .precio {
+  font-size: 14px;
+  color: rgb(103, 103, 103);
+  margin-top: 10px;
+}
+
+/* ESTILOS AL FOOTER */
+
+footer {
+  grid-area: footer;
+  background-color: black;
+  align-items: center;
+  display: grid;
+  width: 100%;
+}
+
+footer p {
+  margin: auto;
+  background-color: black;
+  align-items: center;
+  color: whitesmoke;
+}
+
+/* MEDIAS QUARIES */
+
+@media (max-width: 1200px) {
+  .principal {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+}
+
+@media (max-width: 1000px) {
+  .principal {
+    display: grid;
+    grid-template-columns: auto;
+  }
+}
+
+@media (max-width: 1000px) {
+  .cartas {
+    margin: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "menu main"
+      "footer footer";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+  }
+
+  header {
+    grid-area: header;
+    background-color: black;
+    align-items: center;
+    display: grid;
+    position: relative;
+  }
+
+  .cartas {
+    margin: 20px;
+  }
+}
