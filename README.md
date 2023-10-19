@@ -1,2 +1,2 @@
-# layaut
-Proyecto de E-commerce Layaut
+# layout
+Proyecto de E-commerce Layout
